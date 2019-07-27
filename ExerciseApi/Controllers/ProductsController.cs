@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ExerciseApi.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Data.SqlClient;
 using ExerciseApi.ServiceLayer;
 
 
@@ -15,13 +13,11 @@ namespace ExerciseApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        //private readonly NorthwindContext _context;
         private readonly IProductService _products;
 
         public ProductsController(IProductService products)
         {
             _products = products;
-            //_context = context;
         }
 
         // GET api/products - ALL
